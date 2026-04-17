@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Deep void background gradient -->
+    <radialGradient id="voidbg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#1a0505"/>
+      <stop offset="35%" stop-color="#0a0509"/>
+      <stop offset="100%" stop-color="#020205"/>
+    </radialGradient>
+
+    <!-- Chrome-to-blood gradient for the main wordmark -->
+    <linearGradient id="bloodchrome" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fc"/>
+      <stop offset="18%" stop-color="#d4d7e0"/>
+      <stop offset="38%" stop-color="#8a8e9a"/>
+      <stop offset="58%" stop-color="#6b1818"/>
+      <stop offset="78%" stop-color="#a80a0a"/>
+      <stop offset="100%" stop-color="#5a0505"/>
+    </linearGradient>
+
+    <!-- Chrome gradient for the prefix -->
+    <linearGradient id="chrome" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#e8eaf0"/>
+      <stop offset="50%" stop-color="#9ea3b3"/>
+      <stop offset="100%" stop-color="#3a3e4c"/>
+    </linearGradient>
+
+    <!-- Red glow filter -->
+    <filter id="redglow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#c41414" flood-opacity="0.6"/>
+      <feComposite in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Heavy shadow for letterforms -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3"/>
+      <feOffset dx="0" dy="4"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.7"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Scan line pattern -->
+    <pattern id="scanlines" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="0" stroke="#ffffff" stroke-width="0.3" opacity="0.03"/>
+    </pattern>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" x="0" y="0" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#8b0a0a" stroke-width="0.5" opacity="0.08"/>
+    </pattern>
+
+    <!-- Crack paths for the "shattered" letter effect -->
+    <clipPath id="oblivionclip">
+      <rect x="0" y="0" width="1280" height="720"/>
+    </clipPath>
+  </defs>
+
+  <!-- Void background -->
+  <rect width="1280" height="720" fill="url(#voidbg)"/>
+
+  <!-- Grid overlay -->
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  <!-- Scan lines overlay -->
+  <rect width="1280" height="720" fill="url(#scanlines)"/>
+
+  <!-- Radial crimson glow behind wordmark -->
+  <ellipse cx="640" cy="400" rx="540" ry="220" fill="#8b0a0a" opacity="0.35" filter="url(#redglow)"/>
+  <ellipse cx="640" cy="400" rx="380" ry="150" fill="#c41414" opacity="0.25" filter="url(#redglow)"/>
+
+  <!-- Top pulse line -->
+  <line x1="0" y1="2" x2="1280" y2="2" stroke="#8b0a0a" stroke-width="1" opacity="0.3"/>
+  <line x1="400" y1="2" x2="880" y2="2" stroke="#ef4444" stroke-width="1.5" opacity="0.9"/>
+
+  <!-- Bottom pulse line -->
+  <line x1="0" y1="718" x2="1280" y2="718" stroke="#8b0a0a" stroke-width="1" opacity="0.3"/>
+  <line x1="300" y1="718" x2="980" y2="718" stroke="#c41414" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Corner crosshair marks -->
+  <g stroke="#8b0a0a" stroke-width="1" opacity="0.5" fill="none">
+    <!-- top-left -->
+    <line x1="40" y1="40" x2="80" y2="40"/>
+    <line x1="40" y1="40" x2="40" y2="80"/>
+    <!-- top-right -->
+    <line x1="1240" y1="40" x2="1200" y2="40"/>
+    <line x1="1240" y1="40" x2="1240" y2="80"/>
+    <!-- bottom-left -->
+    <line x1="40" y1="680" x2="80" y2="680"/>
+    <line x1="40" y1="680" x2="40" y2="640"/>
+    <!-- bottom-right -->
+    <line x1="1240" y1="680" x2="1200" y2="680"/>
+    <line x1="1240" y1="680" x2="1240" y2="640"/>
+  </g>
+
+  <!-- Top-left warning marker -->
+  <g transform="translate(60, 76)">
+    <rect x="0" y="0" width="8" height="8" fill="#c41414">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="20" y="8" font-family="'Courier New', monospace" font-size="11" font-weight="700"
+          letter-spacing="4" fill="#ef4444">COMING SOON</text>
+  </g>
+
+  <!-- Top-right system marker -->
+  <g transform="translate(1220, 76)">
+    <text x="0" y="8" font-family="'Courier New', monospace" font-size="11" font-weight="400"
+          letter-spacing="3" fill="#6b7280" text-anchor="end">SYS :: OBLIVION.v0</text>
+  </g>
+
+  <!-- Prefix "AI TRAINER" -->
+  <text x="640" y="250" font-family="'Arial Black', 'Helvetica Neue', sans-serif"
+        font-size="38" font-weight="900" letter-spacing="22"
+        fill="url(#chrome)" text-anchor="middle" filter="url(#shadow)">AI TRAINER</text>
+
+  <!-- Small divider -->
+  <g transform="translate(640, 285)">
+    <line x1="-60" y1="0" x2="-20" y2="0" stroke="#6b7280" stroke-width="1"/>
+    <circle cx="0" cy="0" r="3" fill="#c41414"/>
+    <line x1="20" y1="0" x2="60" y2="0" stroke="#6b7280" stroke-width="1"/>
+  </g>
+
+  <!-- MAIN WORDMARK: OBLIVION -->
+  <text x="640" y="470" font-family="'Arial Black', 'Helvetica Neue', sans-serif"
+        font-size="180" font-weight="900" letter-spacing="-6"
+        fill="url(#bloodchrome)" text-anchor="middle" filter="url(#shadow)">OBLIVION</text>
+
+  <!-- Red underglow / void crack under the wordmark -->
+  <g transform="translate(640, 485)">
+    <line x1="-380" y1="20" x2="380" y2="20" stroke="#5a0505" stroke-width="1" opacity="0.6"/>
+    <line x1="-180" y1="30" x2="180" y2="30" stroke="#c41414" stroke-width="2" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="-60" y1="40" x2="60" y2="40" stroke="#ef4444" stroke-width="1" opacity="0.9"/>
+  </g>
+
+  <!-- Tagline -->
+  <text x="640" y="580" font-family="Georgia, 'Times New Roman', serif"
+        font-size="26" font-style="italic" font-weight="400" letter-spacing="1"
+        fill="#e8eaf0" text-anchor="middle" opacity="0.95">
+    <tspan fill="#c41414" font-style="normal">—</tspan>
+    <tspan dx="10">For the graduates. Bring a bigger machine.</tspan>
+  </text>
+
+  <!-- Bottom metadata bar -->
+  <g transform="translate(0, 650)">
+    <text x="60" y="0" font-family="'Courier New', monospace" font-size="12"
+          letter-spacing="3" fill="#6b7280">PREREQ :: AI-TRAINER-MAX</text>
+    <text x="640" y="0" font-family="'Courier New', monospace" font-size="12"
+          letter-spacing="4" fill="#8b0a0a" text-anchor="middle">★ ◉ ●</text>
+    <text x="1220" y="0" font-family="'Courier New', monospace" font-size="12"
+          letter-spacing="3" fill="#6b7280" text-anchor="end">THEBARDCHAT.GITHUB.IO</text>
+  </g>
+
+  <!-- Subtle glitch rectangles for atmosphere -->
+  <g opacity="0.4">
+    <rect x="120" y="390" width="2" height="60" fill="#8b0a0a"/>
+    <rect x="1140" y="340" width="2" height="80" fill="#c41414"/>
+    <rect x="80" y="450" width="1" height="30" fill="#ef4444"/>
+    <rect x="1180" y="430" width="1" height="40" fill="#8b0a0a"/>
+  </g>
+
+  <!-- Matrix-rain style digital fragments -->
+  <g font-family="'Courier New', monospace" font-size="10" fill="#5a0505" opacity="0.5">
+    <text x="100" y="180">01 ◯</text>
+    <text x="100" y="200">11 ▪</text>
+    <text x="100" y="220">10 ◯</text>
+    <text x="100" y="240">00 ▪</text>
+    <text x="1160" y="180" text-anchor="start">◯ 10</text>
+    <text x="1160" y="200" text-anchor="start">▪ 01</text>
+    <text x="1160" y="220" text-anchor="start">◯ 11</text>
+    <text x="1160" y="240" text-anchor="start">▪ 00</text>
+  </g>
+
+  <!-- Vignette overlay -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+    <stop offset="40%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.7"/>
+  </radialGradient>
+  <rect width="1280" height="720" fill="url(#vignette)" pointer-events="none"/>
+</svg>
