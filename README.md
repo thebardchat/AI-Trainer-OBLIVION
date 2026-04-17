@@ -1,4 +1,5 @@
-# AI-Trainer-OBLIVION
+![AI-Trainer-OBLIVION](.github/assets/banner.svg)
+
 
 > *For the graduates. Bring a bigger machine.*
 
