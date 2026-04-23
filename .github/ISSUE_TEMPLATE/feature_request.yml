@@ -1,0 +1,46 @@
+name: Feature Request / Content Suggestion
+description: Suggest a topic, module, or improvement for the curriculum
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        OBLIVION is still being designed. If you have done MAX and have a specific gap you want covered, this is the right place.
+
+  - type: input
+    id: topic
+    attributes:
+      label: Topic area
+      description: What subject or skill do you want covered?
+      placeholder: e.g., Merging multiple LoRA adapters
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does this matter?
+      description: What specific problem does this solve for you? The more concrete, the better.
+    validations:
+      required: true
+
+  - type: textarea
+    id: prior-art
+    attributes:
+      label: Resources you have already found
+      description: Papers, repos, docs you have found on this topic. Saves research time.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: What GPU tier are you working with?
+      options:
+        - 8GB VRAM (entry)
+        - 12GB VRAM (mid)
+        - 24GB VRAM (high)
+        - No GPU — CPU only
+        - Don't have hardware yet
+    validations:
+      required: false

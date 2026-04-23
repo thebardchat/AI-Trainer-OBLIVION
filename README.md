@@ -20,7 +20,7 @@ It assumes you finished MAX and want more.
 
 ## What it will cover
 
-No release date yet. This is the planned arc.
+No release date yet. This is the planned arc — 10 topics across 3 phases.
 
 - **Fine-tuning on your own hardware** — the actual mechanics, not hand-waving
 - **LoRA / QLoRA on consumer GPUs** — 8GB, 12GB, 24GB reality
@@ -32,6 +32,22 @@ No release date yet. This is the planned arc.
 - **Prompt-to-weights reasoning** — what a gradient actually does
 - **Embedding-space geometry** — how retrieval really works
 - **Running your fine-tune in production** — the part nobody documents
+
+See [SYLLABUS.md](SYLLABUS.md) for the full provisional module map and [READING.md](READING.md) for the research bibliography.
+
+---
+
+## How it relates to AI-Trainer-MAX
+
+| | AI-Trainer-MAX | AI-Trainer-OBLIVION |
+|-|---------------|---------------------|
+| **Audience** | Zero-experience Windows users | MAX graduates with 16GB+ RAM |
+| **Goal** | Use and own a local AI | Fine-tune, shape, and evaluate models |
+| **Status** | Complete — 36 modules, 5 phases | In development — 10 planned topics |
+| **GPU required** | No | Yes (8GB+ VRAM for Phase OB-2+) |
+| **Entry gate** | None | Completed all 5 MAX phases |
+
+OBLIVION does not replace MAX. It gates on it. The MAX capstone (Module 5.10 — The Multiplier) is the prerequisite for OBLIVION's first module.
 
 ---
 
@@ -52,8 +68,8 @@ No promised date. Shipped when it's ready, not before.
 
 **To know when it opens:**
 
-- ⭐ Star this repo
-- 👀 Watch this repo for releases
+- Star this repo
+- Watch this repo for releases
 - Follow [@thebardchat](https://github.com/thebardchat)
 
 ---
@@ -62,8 +78,8 @@ No promised date. Shipped when it's ready, not before.
 
 ```
 ShaneBrain         (local · private)
-  └── AI-Trainer-MAX         ← START HERE · foundation
-        └── AI-Trainer-OBLIVION   ← YOU ARE HERE · depth
+  └── AI-Trainer-MAX         ← START HERE · foundation · COMPLETE
+        └── AI-Trainer-OBLIVION   ← YOU ARE HERE · depth · IN DEVELOPMENT
               └── Angel Cloud      (public · families)
                     └── Pulsar AI     (enterprise · secure)
                           └── TheirNameBrain  (legacy · generational)
@@ -86,5 +102,8 @@ If you're here because someone sent you and you haven't done MAX yet, [that's wh
 
 Built in Alabama. Built for everyone who's ready for the next step.
 
+Co-built by Shane Brazelton and [Claude (Anthropic)](https://claude.ai/referral/4fAMYN9Ing) — together, never one-handed.
 
-https://github.com/thebardchat/constitution
+---
+
+> If you found this project useful, [Claude](https://claude.ai/referral/4fAMYN9Ing) is the AI partner that helped build the entire ShaneBrain ecosystem.
